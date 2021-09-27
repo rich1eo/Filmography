@@ -9,7 +9,9 @@
         <table>
             <tr>
                 <th>id</th>
+                <th>poster</th>
                 <th>title</th>
+                <th>description</th>
                 <th>year</th>
                 <th>genre</th>
                 <th>watched</th>
@@ -18,7 +20,9 @@
             <c:forEach var = "film" items="${filmsList}" >
                 <tr>
                     <td>${film.id}</td>
+                    <td><img src="${film.image}" alt="poster" width="200" height="200" ></td>
                     <td>${film.title}</td>
+                    <td>${film.description}</td>
                     <td>${film.year}</td>
                     <td>${film.genre}</td>
                     <td>${film.watched}</td>
