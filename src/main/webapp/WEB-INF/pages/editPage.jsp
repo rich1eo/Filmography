@@ -20,8 +20,12 @@
             <c:if test="${!empty film.title}">
                 <input type="hidden" name="id" value="${film.id}">
             </c:if>
+            <label for="poster">Poster</label>
+            <input type="text" name="poster" id="poster">
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
             <label for="year">Year</label>
             <input type="text" name="year" id="year">
             <label for="genre">Genre</label>

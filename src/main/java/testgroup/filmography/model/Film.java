@@ -11,8 +11,14 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "image")
+    private String image;
+
     @Column(name = "title")
     private String title;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "year")
     private int year;
@@ -37,6 +43,22 @@ public class Film {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getYear() {
