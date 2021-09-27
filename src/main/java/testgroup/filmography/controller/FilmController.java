@@ -48,6 +48,40 @@ public class FilmController {
         return modelAndView;
     }
 
+    /*
+    *
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView editPage(@PathVariable("id") int id,
+                                 @ModelAttribute("message") String message) {
+        Film film = filmService.getById(id);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("editPage");
+        modelAndView.addObject("film", film);
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public ModelAndView editFilm(@ModelAttribute("film") Film film) {
+        ModelAndView modelAndView = new ModelAndView();
+        if (filmService.checkTitle(film.getTitle()) || filmService.getById(film.getId()).getTitle().equals(film.getTitle())) {
+            modelAndView.setViewName("redirect:/");
+            modelAndView.addObject("page", page);
+            filmService.edit(film);
+        } else {
+            modelAndView.addObject("message","part with title \"" + film.getTitle() + "\" already exists");
+            modelAndView.setViewName("redirect:/edit/" +  + film.getId());
+        }
+        return modelAndView;
+    }
+    * */
+
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public ModelAndView addPage(@ModelAttribute("message") String message) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("editPage");
+        return modelAndView;
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelAndView addFilm(@ModelAttribute("film") Film film) {
         ModelAndView modelAndView = new ModelAndView();

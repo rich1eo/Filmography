@@ -10,4 +10,5 @@ public interface FilmService {
     void delete(Film film);
     void edit(Film film);
     Film getById(int id);
+    boolean checkTitle(String title);
 }
