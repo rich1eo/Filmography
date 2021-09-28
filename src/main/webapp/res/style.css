@@ -1,19 +1,30 @@
 body {
-    margin: 0;
     background: linear-gradient(45deg, #49a09d, #5f2c82);
     font-family: sans-serif;
     font-weight: 100;
+    color: lightpink;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.filmHeader {
+    margin-top: 50px;
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 table {
-    width: 1500px;
+    width: 1200px;
     border-collapse:separate;
     border-spacing: 0 15px;
     overflow: hidden;
@@ -28,10 +39,102 @@ th,
 td {
     padding: 15px;
     background-color: rgba(255,255,255,0.2);
-    color: #fff;
     text-align: center;
 }
 
 thead {
     background-color: #55608f;
+}
+
+a {
+    display: inline-block;
+    color: lightpink;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 5px 10px;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    opacity: 0.5;
+}
+
+a.selected {
+    box-shadow: 0 0 25px rgb(255,255,255);
+    background: linear-gradient(1deg, rgb(190, 200, 255), rgba(235, 245, 255, 0.9));
+}
+
+a.current-page {
+    pointer-events: none;
+    cursor: default;
+    font-size: 150%;
+    box-shadow: 0 0;
+}
+
+a:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+a:active {
+    background: linear-gradient(1deg, rgb(255, 255, 255), rgba(210, 210, 210, 0.9));
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    background: url("icons.png") no-repeat;
+}
+
+.icon-add {
+    background-position: 0 0;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.icon-delete {
+    background-position: -24px 0;
+}
+
+.icon-edit {
+    background-position: -49px 0;
+}
+
+.icon-watched {
+    background-position: -74px 0;
+}
+
+.icon-first {
+    background-position: -125px 0;
+    margin: 0;
+}
+
+.icon-prev {
+    background-position: -147px 0;
+    margin: 0;
+}
+
+.icon-next {
+    background-position: -166px 0;
+    margin: 0;
+}
+
+.icon-last {
+    background-position: -188px 0;
+    margin: 0;
+}
+
+.right-side {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
