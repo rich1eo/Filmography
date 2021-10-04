@@ -4,6 +4,7 @@
     <head>
         <title>Фильмы</title>
         <link href="<c:url value="/res/style.css"/>" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="<c:url value="/res/pageIcon.png"/>"/>
     </head>
     <body>
         <div class = "filmHeader">
