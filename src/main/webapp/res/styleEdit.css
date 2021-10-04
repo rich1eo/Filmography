@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    font-family: sans-serif;
+    font-weight: 100;
+    color: lightpink;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style input {
+    border-radius: 7px;
+    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
+    outline: none;
+    height: 60px;
+    width: 450px;
+    font-size: 15pt;
+    text-align: center;
+    box-shadow: 3px 3px 25px rgb(15,15,45);
+}
+
+.style textarea {
+    border-radius: 7px;
+    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
+    outline: none;
+    height: 150px;
+    width: 450px;
+    font-size: 15pt;
+    text-align: left;
+    box-shadow: 3px 3px 25px rgb(15,15,45);
+}
+
+input, textarea:focus {
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+input, textarea:hover {
+    box-shadow: 0 0 25px rgb(155,155,155);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type=submit]:active {
+    transition: 0s;
+    background: linear-gradient(1deg, rgb(255, 255, 255), rgba(210, 210, 210, 0.9));
+}
+
+.checkbox label {
+    display: block;
+    border-radius: 7px;
+    background: linear-gradient(1deg, rgb(180, 200, 220), rgba(255, 255, 255, 0.9));
+    padding-top: 5px;
+    height: 25px;
+    width: 450px;
+    font-size: 20px;
+    box-shadow: 3px 3px 25px rgb(15,15,45);
+    margin: auto;
+    color: rgba(0,0,0,0.2);
+    text-shadow: 0 0;
+    cursor: pointer;
+}
+
+.checkbox label::selection, .checkbox span::selection {
+    background: transparent;
+}
+
+.checkbox label:hover {
+    box-shadow: 0 0 25px rgb(155,155,155);
+}
+
+.checkbox label:active {
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-common {
+    display: block;
+    height: 30px;
+    width: 40px;
+    position:relative;
+    margin: auto;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+.checkbox-yes {
+    bottom: 57px;
+    left: 150px;
+    opacity:0;
+}
+
+.checkbox-no {
+    bottom: 27px;
+    right: 2px;
+}
+
+#watched:checked ~ .checkbox-yes {
+    opacity:1;
+}
+
+#watched:checked ~ .checkbox-no {
+    opacity:0;
+}
